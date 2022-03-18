@@ -1,5 +1,5 @@
 import React from 'react';
-// import './calculator.css';
+import './calculator.css';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -12,27 +12,27 @@ class Calculator extends React.Component {
       <section className="calculator">
         <div className="screen">0</div>
         <div className="calc-btn-start">
-          <button type="button"> AC</button>
-          <button type="button"> +/-</button>
-          <button type="button"> %</button>
-          <button type="button" className="operator-button">÷</button>
-          <button type="button"> 7</button>
-          <button type="button"> 8</button>
-          <button type="button"> 9</button>
-          <button type="button" className="operator-button">x</button>
-          <button type="button"> 4</button>
-          <button type="button"> 5</button>
-          <button type="button"> 6</button>
-          <button type="button" className="operator-button">-</button>
-          <button type="button"> 1</button>
-          <button type="button"> 2</button>
-          <button type="button"> 3</button>
-          <button type="button" className="operator-button">+</button>
+          <button type="button" className="calc-btn"> AC</button>
+          <button type="button" className="calc-btn"> +/-</button>
+          <button type="button" className="calc-btn"> %</button>
+          <button type="button" className="operator-button calc-btn">÷</button>
+          <button type="button" className="calc-btn"> 7</button>
+          <button type="button" className="calc-btn"> 8</button>
+          <button type="button" className="calc-btn"> 9</button>
+          <button type="button" className="operator-button calc-btn">x</button>
+          <button type="button" className="calc-btn"> 4</button>
+          <button type="button" className="calc-btn"> 5</button>
+          <button type="button" className="calc-btn"> 6</button>
+          <button type="button" className="operator-button calc-btn">-</button>
+          <button type="button" className="calc-btn"> 1</button>
+          <button type="button" className="calc-btn"> 2</button>
+          <button type="button" className="calc-btn"> 3</button>
+          <button type="button" className="operator-button calc-btn">+</button>
         </div>
         <span className="calc-btn-end">
-          <button type="button" className="button-section">0</button>
-          <button type="button" className="button-section">.</button>
-          <button type="button" className="button-section operator">=</button>
+          <button type="button" className="calc-btn">0</button>
+          <button type="button" className="calc-btn">.</button>
+          <button type="button" className="operator-button calc-btn">=</button>
         </span>
       </section>
     );
