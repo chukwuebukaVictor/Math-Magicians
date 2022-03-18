@@ -4,37 +4,38 @@
 }
 
 .screen {
-  background-color: rgb(133,134,147);
+  background-color: rgb(133, 134, 147);
   padding: 10px;
   color: #fff;
   text-align: right;
   font-size: 30px;
   width: auto;
 }
+
 .calc-btn-start {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-  }
-  
-  .calc-btn {
-    padding: 20px;
-    cursor: pointer;
-    border: 1px solid #dadada;
-  }
-  
-  .calc-btn:hover {
-    background-color: #cac2c2;
-  }
-  
-  .operator-button {
-    background-color: #ff9100fd;
-  }
-  
-  .operator-button:hover {
-    background-color: #e28b19;
-  }
-  
-  .calc-btn-end {
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-  }
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.calc-btn {
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #dadada;
+}
+
+.calc-btn:hover {
+  background-color: #cac2c2;
+}
+
+.operator-button {
+  background-color: #ff9100fd;
+}
+
+.operator-button:hover {
+  background-color: #e28b19;
+}
+
+.calc-btn-end {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
