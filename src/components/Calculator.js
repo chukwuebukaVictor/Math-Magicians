@@ -1,5 +1,5 @@
 import React from 'react';
-import './calculator.css';
+// import './calculator.css';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -7,8 +7,8 @@ class Calculator extends React.Component {
     this.state = {};
   }
 
-   render() {
-     return(
+  render() {
+    return (
       <section className="calculator">
         <div className="screen">0</div>
         <div className="calc-btn-start">
@@ -33,10 +33,10 @@ class Calculator extends React.Component {
           <button type="button" className="button-section">0</button>
           <button type="button" className="button-section">.</button>
           <button type="button" className="button-section operator">=</button>
-      </span>
-    </section>
-     )
-    }
+        </span>
+      </section>
+    );
+  }
 }
-    
+
 export default Calculator;
