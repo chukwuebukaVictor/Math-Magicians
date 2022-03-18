@@ -1,12 +1,19 @@
-// import logo from './logo.svg';
-// import './App.css';
+import React from 'react';
+import './App.css';
+import Calculator from './components/Calculator';
 
-function App() {
-  return (
-    <div>
-      <h1>I am stucked </h1>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Calculator />
+      </div>
+    );
+  }
 }
-
 export default App;
