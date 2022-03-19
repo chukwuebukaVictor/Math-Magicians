@@ -1,23 +1,24 @@
-import React from 'react';
-import './calculator.css';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import calculate from '../Logic/calculate';
+import './calculator.css';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.calculator = this.calculator.bind(this);
-    this.returnSection = this.returnSection.bind(this);
-  }
+const Calculator = () => {
+  const [digitObj, setDigitObj] = useState({
+    total: 0,
+    next: 0,
+    operation: null,
+  });
 
-  calculator = (obj, button) => {
-    const { updateState } = this.props;
+  const updateState = (obj) => {
+    setDigitObj(obj);
+  };
+
+  const calculator = (obj, button) => {
     const newObj = calculate(obj, button);
     updateState(newObj);
-  }
+  };
 
-  returnSection = () => {
-    const { digitObj } = this.props;
+  const returnSection = () => {
     const { total, next, operation } = digitObj;
 
     if (total === null && next === null) {
@@ -33,44 +34,45 @@ class Calculator extends React.Component {
       return total;
     }
     return total;
-  }
+  };
 
-  render() {
-    const { digitObj } = this.props;
-    return (
-      <section className="calculator">
-        <div className="screen">{(this.returnSection())}</div>
-        <div className="calc-btn-start">
-          <button type="button" className="calc-btn" value="AC" onClick={() => { this.calculator(digitObj, 'AC'); }}> AC</button>
-          <button type="button" className="calc-btn" value="+/-" onClick={() => { this.calculator(digitObj, '+/-'); }}> +/-</button>
-          <button type="button" className="calc-btn" value="%" onClick={() => { this.calculator(digitObj, '%'); }}> %</button>
-          <button type="button" className="operator-button calc-btn" value="÷" onClick={() => { this.calculator(digitObj, '÷'); }}>÷</button>
-          <button type="button" className="calc-btn" value="7" onClick={() => { this.calculator(digitObj, '7'); }}> 7</button>
-          <button type="button" className="calc-btn" value="8" onClick={() => { this.calculator(digitObj, '8'); }}> 8</button>
-          <button type="button" className="calc-btn" value="AC" onClick={() => { this.calculator(digitObj, '9'); }}> 9</button>
-          <button type="button" className="operator-button calc-btn" value="x" onClick={() => { this.calculator(digitObj, 'x'); }}>x</button>
-          <button type="button" className="calc-btn" value="4" onClick={() => { this.calculator(digitObj, '4'); }}> 4</button>
-          <button type="button" className="calc-btn" value="5" onClick={() => { this.calculator(digitObj, '5'); }}> 5</button>
-          <button type="button" className="calc-btn" value="6" onClick={() => { this.calculator(digitObj, '6'); }}> 6</button>
-          <button type="button" className="operator-button calc-btn" value="-" onClick={() => { this.calculator(digitObj, '-'); }}>-</button>
-          <button type="button" className="calc-btn" value="1" onClick={() => { this.calculator(digitObj, '1'); }}> 1</button>
-          <button type="button" className="calc-btn" value="3" onClick={() => { this.calculator(digitObj, '3'); }}> 2</button>
-          <button type="button" className="calc-btn" value="3" onClick={() => { this.calculator(digitObj, '3'); }}> 3</button>
-          <button type="button" className="operator-button calc-btn" value="+" onClick={() => { this.calculator(digitObj, '+'); }}>+</button>
-        </div>
-        <span className="calc-btn-end">
-          <button type="button" className="calc-btn" value="0" onClick={() => { this.calculator(digitObj, '0'); }}>0</button>
-          <button type="button" className="calc-btn" value="." onClick={() => { this.calculator(digitObj, '.'); }}>.</button>
-          <button type="button" className="operator-button calc-btn" value="=" onClick={() => { this.calculator(digitObj, '='); }}>=</button>
-        </span>
-      </section>
-    );
-  }
-}
+  const buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+'].map((btn) => (
+    (btn === 'x' || btn === '+' || btn === '-' || btn === '÷') ? (
+      <button
+        type="button"
+        className="operator-button calc-btn"
+        value={btn}
+        key={btn}
+        onClick={() => calculator(digitObj, btn)}
+      >
+        {btn}
+      </button>
+    ) : (
+      <button
+        type="button"
+        className="calc-btn"
+        value={btn}
+        key={btn}
+        onClick={() => calculator(digitObj, btn)}
+      >
+        {btn}
+      </button>
+    )
+  ));
 
-Calculator.propTypes = {
-  updateState: PropTypes.func.isRequired,
-  digitObj: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  return (
+    <section className="calculator">
+      <div className="screen">{returnSection()}</div>
+      <div className="calc-btn-start">
+        {buttons}
+      </div>
+      <span className="calc-btn-end">
+        <button type="button" className="calc-btn" value="0" onClick={() => { calculator(digitObj, '0'); }}>0</button>
+        <button type="button" className="calc-btn" value="." onClick={() => { calculator(digitObj, '.'); }}>.</button>
+        <button type="button" className="operator-button calc-btn" value="=" onClick={() => { calculator(digitObj, '='); }}>=</button>
+      </span>
+    </section>
+  );
 };
 
 export default Calculator;
