@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -39,7 +39,7 @@ body {
 }
 
 .operator-button {
-  background-color:rgb(123, 148, 233);
+  background-color: rgb(123, 148, 233);
 }
 
 .operator-button:hover {
@@ -51,14 +51,14 @@ body {
   grid-template-columns: 50% 25% 25%;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 2rem;
 }
 
-.links{
+.links {
   text-decoration: none;
   padding: 0 0 0 1rem;
   font-style: oblique;
@@ -66,11 +66,11 @@ body {
   color: antiquewhite;
 }
 
-.nav > *{
+.nav > * {
   color: antiquewhite;
 }
 
-.welcome{
+.welcome {
   color: antiquewhite;
   font-size: 1.5rem;
   display: flex;
@@ -81,7 +81,7 @@ body {
   margin: 0 2rem;
 }
 
-.quotes{
+.quotes {
   color: antiquewhite;
   padding: 3rem 3rem;
   display: flex;
@@ -94,7 +94,7 @@ body {
   margin: 0 2rem;
 }
 
-.no-match{
+.no-match {
   color: antiquewhite;
   padding-top: 3rem;
   display: flex;
