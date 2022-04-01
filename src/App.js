@@ -1,5 +1,10 @@
 import React from 'react';
 import Calculator from './components/Calculator';
+import Home from './pages/Home';
+import Quote from './pages/Quotes';
+import NotMatch from './pages/NotMatch';
+import Navbar from './components/Navbar';
+
 
 class App extends React.Component {
   constructor(props) {
