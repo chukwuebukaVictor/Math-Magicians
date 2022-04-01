@@ -6,8 +6,6 @@ import Quote from './pages/Quotes';
 import NotMatch from './pages/NotMatch';
 import Navbar from './components/Navbar';
 
-
-
 const App = () => (
   <Router>
     <Navbar />
@@ -21,8 +19,6 @@ const App = () => (
 );
 
 export default App;
-
-
 
 // class App extends React.Component {
 //   constructor(props) {
