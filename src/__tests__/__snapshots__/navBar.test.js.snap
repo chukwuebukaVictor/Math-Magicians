@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Header component The component should render 1`] = `
+<DocumentFragment>
+  <nav
+    class="nav"
+  >
+    <h1>
+      Math Magician
+    </h1>
+    <ul>
+      <a
+        aria-current="page"
+        class="links active"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="links"
+        href="/calculator"
+      >
+        Calculator
+      </a>
+      <a
+        class="links"
+        href="/quote"
+      >
+        Qoute
+      </a>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Test for Navbar component The component should render 1`] = `
+<DocumentFragment>
+  <nav
+    class="nav"
+  >
+    <h1>
+      Math Magician
+    </h1>
+    <ul>
+      <a
+        aria-current="page"
+        class="links active"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="links"
+        href="/calculator"
+      >
+        Calculator
+      </a>
+      <a
+        class="links"
+        href="/quote"
+      >
+        Qoute
+      </a>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
